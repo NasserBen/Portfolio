@@ -9,15 +9,34 @@
     <script src="https://kit.fontawesome.com/d476b0414a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="intro"><p>Hey, I'm</p></div>
-        <div class="name">Nasser Ben</div>
-        <div class="memo"><h3 href="" class="typewrite" data-period="2000" data-type='[ "Always Learning.", "Can&lsquo;t stop.", "Won&rsquo;t Stop."]' style="margin: 0;"></h3></div>
+    <!-- Navigation -->
+    <nav id="nav">
+        <h3 class="logo">LogoX</h3>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#about">About.</a></li>
+            <li><a href="#projects">Projects.</a></li>
+            <li><a href="#contact">Contact.</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2" style="opacity: 0;"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
 
-        
+    <!-- Header -->
+    <div class="header-container">
+        <div class="intro"><p>Hey, I'm</p></div>
+        <div class="name">
+            <h1>Nasser <span class="ben">Ben.</span></h1>
+        </div>
+        <div class="memo"><h3 class="typewrite" data-period="2000" data-type='[ "Always Learning.", "Can&lsquo;t stop.", "Won&rsquo;t Stop."]' style="margin: 0;"></h3></div>
+
+
         <!-- <div class="socials"><a href="https://www.linkedin.com/in/nasserben/" target="_blank"><i class="fab fa-linkedin" style="margin-right: 2%"></i></a><a href="https://www.github.com/nasserben" target="_blank"><i class="fab fa-github"></i></a></div> -->
     </div>
     <!-- Script -->
+    <script src="Nav.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
