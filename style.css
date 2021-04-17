@@ -46,11 +46,17 @@ li {
  }
 
 .header-container {
-  height: 100vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-left: 3.5%;
+}
+
+.contact-button{
+  font-weight: bold;
+  margin-top: 5%;
+  color: var(--hText-color);
 }
 
 .intro {
@@ -65,7 +71,7 @@ li {
 .memo {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: bold;
-  font-size: clamp(7px, 2.5vw, 120px);
+  font-size: clamp(1rem, 2.5vw, 120px);
   margin-top: 0.5%;
   color:  var(--pText-color);
 }
@@ -77,10 +83,14 @@ li {
   }
 }
 
-.logo {
-  margin: 0;
+#logo {
+  margin: 3.5% 0 0 3.5%;
+  width: 10%;
+  max-width: 100px;
 }
 /* _________________________________________ */
+
+
 /* Navigation */
 nav {
   z-index: 10;
@@ -133,10 +143,12 @@ nav {
 
 
 @media(min-width:400px) {
-  /* burger */
+  #logo {
+    margin-left: 7%;
+  }
   .burger {
     display: none;
-    margin-right: 35px;
+    /* margin-right: 35px; */
   }
   .nav-links {
     margin: 0;
@@ -147,36 +159,12 @@ nav {
   .nav-links li {
     list-style: none;  
   }
-  
   .nav-links li:last-child {
     margin-right: 20px;
   }
+
 }
 /* _________________________________________ */
-
-/* Animate nav links */
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  } to {
-    opacity: 1;
-    transform: translateX(0px)
-  }
-}
-
-
-/* Toggle Burger */
-.toggle .line1 {
-  transform: rotate(-45deg) translate(-5px,6px);
-
-}
-.toggle .line2 {
-  opacity: 0;
-}
-.toggle .line3 {
-  transform: rotate(45deg) translate(-5px,-6px);
-}
 
 /* 
 .socials {
@@ -214,3 +202,69 @@ nav {
     font-size: 15px;
   }
 } */
+
+/* Animate nav links */
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  } to {
+    opacity: 1;
+    transform: translateX(0px)
+  }
+}
+
+
+/* Toggle Burger */
+.menu {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Burger Animation */
+.menuRotate.active {
+  transform: rotate(45deg);
+}
+
+
+.line {
+  fill:none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke:var(--hText-color);
+  stroke-width:5.5;
+  stroke-linecap:round;
+}
+
+.top {
+  stroke-dasharray: 40 160;
+}
+
+.middle {
+stroke-dasharray: 40 142;
+transform-origin: 50%;
+transition: transform 400ms;
+}
+
+.bottom {
+  stroke-dasharray: 40 85;
+  transform-origin: 50%;
+  transition: transform 400ms, stroke-dashoffset 400ms;
+}
+
+.active .top {
+  stroke-dashoffset: -64px;
+}
+
+.active .middle {
+  transform: rotate(90deg);
+}
+
+.active .bottom {
+  stroke-dashoffset: -64px;
+}
+/* ____________________________ */

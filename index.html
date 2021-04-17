@@ -11,30 +11,44 @@
 <body>
     <!-- Navigation -->
     <nav id="nav">
-        <h3 class="logo">LogoX</h3>
+        <img src="Logo.svg" alt="Nasser Ben" id="logo">
         <ul class="nav-links" id="nav-links">
-            <li><a href="#about">About.</a></li>
             <li><a href="#projects">Projects.</a></li>
+            <li><a href="#about">About.</a></li>
             <li><a href="#contact">Contact.</a></li>
         </ul>
         <div class="burger">
-            <div class="line1"></div>
-            <div class="line2" style="opacity: 0;"></div>
-            <div class="line3"></div>
+            <svg class="menu menuRotate" viewBox="0 0 100 100" width="30" onclick="this.classList.toggle('active')">
+                <path
+                      class="line top"
+                      d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+                <path
+                      class="line middle"
+                      d="m 30,50 h 40" />
+                <path
+                      class="line bottom"
+                      d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+              </svg>
         </div>
     </nav>
 
     <!-- Header -->
-    <div class="header-container">
-        <div class="intro"><p>Hey, I'm</p></div>
-        <div class="name">
-            <h1>Nasser <span class="ben">Ben.</span></h1>
+    <section id="header">
+        <div class="header-container">
+            <div class="intro"><p>Hey, I'm</p></div>
+            <div class="name">
+                <h1>Nasser <span class="ben">Ben.</span></h1>
+            </div>
+            <div class="memo"><h3 class="typewrite" data-period="2000" data-type='[ "Always Learning.", "Can&lsquo;t stop.", "Won&rsquo;t Stop."]' style="margin: 0;"></h3></div>
+            <div class="contact-button"><a href="#contact">Contact.</a></div> 
         </div>
-        <div class="memo"><h3 class="typewrite" data-period="2000" data-type='[ "Always Learning.", "Can&lsquo;t stop.", "Won&rsquo;t Stop."]' style="margin: 0;"></h3></div>
+    </section>
 
-
-        <!-- <div class="socials"><a href="https://www.linkedin.com/in/nasserben/" target="_blank"><i class="fab fa-linkedin" style="margin-right: 2%"></i></a><a href="https://www.github.com/nasserben" target="_blank"><i class="fab fa-github"></i></a></div> -->
-    </div>
+    <section id="work">
+        <div class="project1"></div>
+    </section>
+   
+     <!-- <div class="socials"><a href="https://www.linkedin.com/in/nasserben/" target="_blank"><i class="fab fa-linkedin" style="margin-right: 2%"></i></a><a href="https://www.github.com/nasserben" target="_blank"><i class="fab fa-github"></i></a></div> -->
     <!-- Script -->
     <script src="Nav.js"></script>
     <script src="script.js"></script>
