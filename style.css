@@ -32,7 +32,6 @@ li {
    outline: none;
    text-decoration: none;
    color: var(--hText-color);
-   /* color: white; */
  }
 
  a:hover {
@@ -262,10 +261,6 @@ h1 {
 
 #contact img {
   width: 42px;
-}
-
-#contact img:hover {
-  fill: var(--pText-color);
 }
 
 #contact p {
