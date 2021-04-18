@@ -220,6 +220,16 @@ h1 {
   font-weight: 700;
   margin-right: 2rem;
 }
+
+/* About */
+#about .title {
+  margin-top: 50vh;
+}
+
+#about p {
+  margin-top: 2rem;
+  line-height: 1.5;
+}
 /* _________________________________________ */
 
 /* 
