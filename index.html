@@ -6,9 +6,10 @@
     <title>Nasser Ben</title>
     <link rel="icon" type="ico" href="icon.ico">
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <img src="Logo.svg" alt="Nasser Ben" id="logo">
+    <a href="/"><img src="Logo.svg" alt="Nasser Ben" id="logo"></a>
     <!-- Navigation -->
     <nav id="nav">
         <ul class="nav-links" id="nav-links">
@@ -45,7 +46,9 @@
 
     <!-- Work -->
     <section id="work">
-        <h1>Work.</h1>
+        <h1 data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine">Work.</h1>
         <div class="project first">
             <img src="project1.png" alt="Image Api">
             <h2 class="title">Detect Faces API</h2>
@@ -76,16 +79,20 @@
     </section>
 
     <!-- About -->
-    <section id="about">
-        <h1 class="title">About.</h1>
-        <p> TL: DR A web developer who loves to learn.</p>
+    <section id="about" >
+        <h1 class="title" data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine">About.</h1>
+        <p> TL;DR A web developer who loves to learn.</p>
         <p class="description">I am a web developer and UI/UX designer who has a passion for bringing ideas to life. Great ideas inspire me to learn and get stuff done. I am currently expanding my knowledge in React, Node js, and AWS.</p>
         <p class="description">When I am not learning, you’ll find me keeping up to date with the latest tech or catch me playing soccer.</p>
     </section>
 
     <!-- Contact -->
     <section id="contact">
-        <h1 class="title">Contact.</h1>
+        <h1 class="title" data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine">Contact.</h1>
         <div class= "info-container">
             <a href="mailto: contact@nasserben.com" target="_blank"><img src="mail.svg" alt="email icon"></a>
             <p>contact@nasserben.com</p>
@@ -99,8 +106,11 @@
             <p>github.com/nasserben</p>
         </div>
     </section>
+    <p class="footer" style="text-align: right; margin: 0.5rem; color: var(--pText-color); margin-top: 20vh">&copy; <script>document.write(new Date().getFullYear())</script> Nasser Ben</p>
 
     <!-- Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
     <script src="Nav.js"></script>
     <script src="script.js"></script>
 </body>

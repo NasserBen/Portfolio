@@ -15,7 +15,6 @@ body {
   background-color: black;
   color: white;
   font-family: "Inter", sans-serif;
-  height: 1000vh;
 }
 
 li {
@@ -49,7 +48,7 @@ li {
  #logo {
   position: absolute;
   margin: 3.5% 0 0 3.5%;
-  width: 10%;
+  width: 20%;
   max-width: 100px;
   top: 0;
   left: 0;
@@ -99,8 +98,8 @@ nav {
   margin: 0;
   padding: 0;
   position: fixed;
-  right: 0.75rem;
-  top: 0.75rem;
+  right: 0.35rem;
+  top: 0.55rem;
   cursor: pointer;
 }
 
@@ -166,11 +165,26 @@ h1 {
 
 @media(min-width:400px) {
   #logo {
+    margin: 0;
+    margin-left: 7%;
+  }
+  #work {
+    margin: 0;
+    margin-left: 7%;
+  }
+  #about {
+    margin: 0;
+    margin-left: 7%;
+  }
+  #contact {
+    margin: 0;
+    margin-left: 7%;
+  }
+  .header-container {
     margin-left: 7%;
   }
   .burger {
     display: none;
-    /* margin-right: 35px; */
   }
   .nav-links {
     margin: 0;
@@ -190,7 +204,7 @@ h1 {
  /* Work */
 #work {
   margin-left: 3.5%;
-  margin-right: 3.5%;
+  margin-right: 10%;
 }
 
 #work h1 {
@@ -230,6 +244,7 @@ h1 {
 
 #about {
   margin-left: 3.5%;
+  margin-right: 7%;
 }
 #about .title {
   font-weight: 700;
@@ -244,6 +259,7 @@ h1 {
 /* Contact */
 #contact {
   margin-left: 3.5%;
+  margin-right: 3.5%;
 }
 
 .info-container {
@@ -269,43 +285,6 @@ h1 {
 }
 
 /* _________________________________________ */
-
-/* 
-.socials {
-  margin-top: 5%;
-  font-size: clamp(10px, 2vw, 150px);
-  margin-left: 0.20%;
-} */
-
-/* @media(max-width:350px) {
-  .container {
-    margin-left: 0%;
-  }
-  .intro {
-    font-size: 5vw;
-  }
-  .name {
-    margin-top: 5%;
-    font-size: 15vw;
-  }
-  .memo {
-    font-size: 7vw;
-    margin-top: 3%;
-  }
-  a {
-    margin-right: 3%;
-    font-size: 25px;
-  }
-  .socials {
-    margin-top: 17%;
-  }
-}
-
-@media (max-width:200px) {
-  a {
-    font-size: 15px;
-  }
-} */
 
 /* Animate nav links */
 @keyframes navLinkFade {
@@ -381,4 +360,41 @@ transition: transform 400ms;
   margin: 5px;
   border-radius: 10px;
   transition: all 0.3s ease;
+} */
+
+/* 
+.socials {
+  margin-top: 5%;
+  font-size: clamp(10px, 2vw, 150px);
+  margin-left: 0.20%;
+} */
+
+/* @media(max-width:350px) {
+  .container {
+    margin-left: 0%;
+  }
+  .intro {
+    font-size: 5vw;
+  }
+  .name {
+    margin-top: 5%;
+    font-size: 15vw;
+  }
+  .memo {
+    font-size: 7vw;
+    margin-top: 3%;
+  }
+  a {
+    margin-right: 3%;
+    font-size: 25px;
+  }
+  .socials {
+    margin-top: 17%;
+  }
+}
+
+@media (max-width:200px) {
+  a {
+    font-size: 15px;
+  }
 } */
