@@ -4,7 +4,6 @@ const navSlide = () => {
   const menuRotate = document.querySelector('.menuRotate')
   const nav = document.querySelector('.nav-links')
   const navLinks = document.querySelectorAll('.nav-links li')
-  let closed = true
 
   burger.addEventListener('click', openNav)
   nav.addEventListener('click', e => {
@@ -14,12 +13,6 @@ const navSlide = () => {
 
   function openNav () {
   
-    if (!closed) {
-      closeNav()
-      return
-    }
-    closed = false
-
     //Animate Burger
     burger.classList.toggle('active')
     menuRotate.classList.toggle('active')
@@ -34,7 +27,6 @@ const navSlide = () => {
   }
   
   function closeNav () {
-    closed = true
     //Reset Animated Burger
     burger.classList.toggle('active')
     menuRotate.classList.toggle('active')
