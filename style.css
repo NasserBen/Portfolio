@@ -90,10 +90,6 @@ nav {
   opacity: 0;
 }
 
-.nav-links li:last-child {
-  margin-bottom: 70px;
-}
-
 .burger {
   margin: 0;
   padding: 0;
@@ -153,54 +149,6 @@ h1 {
 }
 
 
-@media(min-width: 500px) {
-  .header-container {
-    margin-left: 7%;
-  }
-}
-
-/* _________________________________________ */
-
-
-
-@media(min-width:400px) {
-  #logo {
-    margin: 0;
-    margin-left: 7%;
-  }
-  #work {
-    margin: 0;
-    margin-left: 7%;
-  }
-  #about {
-    margin: 0;
-    margin-left: 7%;
-  }
-  #contact {
-    margin: 0;
-    margin-left: 7%;
-  }
-  .header-container {
-    margin-left: 7%;
-  }
-  .burger {
-    display: none;
-  }
-  .nav-links {
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: right;
-  } 
-  .nav-links li {
-    list-style: none;  
-  }
-  .nav-links li:last-child {
-    margin-right: 20px;
-  }
-
-}
-
  /* Work */
 #work {
   margin-left: 3.5%;
@@ -212,7 +160,8 @@ h1 {
 }
 
 #work img {
-  width: 100%;
+  width: 70%;
+  max-height: 50%;
 }
 
 .project {
@@ -228,11 +177,12 @@ h1 {
 
 .description {
   color: var(--pText-color);
-  max-width: 75ch;
+  max-width: 50ch;
+  line-height: 1.5;
 }
 
 .btnContainer {
-  margin-top: 5%;
+  margin-top: 2rem;
 }
 
 #work a {
@@ -284,8 +234,6 @@ h1 {
   margin-left: 1rem;
 }
 
-/* _________________________________________ */
-
 /* Animate nav links */
 @keyframes navLinkFade {
   from {
@@ -313,7 +261,6 @@ h1 {
 .menuRotate.active {
   transform: rotate(45deg);
 }
-
 
 .line {
   fill:none;
@@ -350,51 +297,52 @@ transition: transform 400ms;
 .active .bottom {
   stroke-dashoffset: -64px;
 }
-/* ____________________________ */
-/* archive */
-/* 
-.burger div {
-  width: 25px;
-  height: 3px;
-  background-color:var(--hText-color);
-  margin: 5px;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-} */
 
-/* 
-.socials {
-  margin-top: 5%;
-  font-size: clamp(10px, 2vw, 150px);
-  margin-left: 0.20%;
-} */
 
-/* @media(max-width:350px) {
-  .container {
-    margin-left: 0%;
-  }
-  .intro {
-    font-size: 5vw;
-  }
-  .name {
-    margin-top: 5%;
-    font-size: 15vw;
-  }
-  .memo {
-    font-size: 7vw;
-    margin-top: 3%;
-  }
-  a {
-    margin-right: 3%;
-    font-size: 25px;
-  }
-  .socials {
-    margin-top: 17%;
-  }
+@media(max-width:200px) {
+
+
+
 }
 
-@media (max-width:200px) {
-  a {
-    font-size: 15px;
+@media (max-width: 1000px) {
+  
+  .contact-button {
+    color: red;
+    font-size: 1.75rem;
   }
-} */
+}
+@media(min-width:400px) {
+  #logo {
+    margin-left: 10%;
+  }
+  #work {
+    margin: 0;
+    margin-left: 10%;
+  }
+  #about {
+    margin: 0;
+    margin-left: 10%;
+  }
+  #contact {
+    margin: 0;
+    margin-left: 10%;
+  }
+  .header-container {
+    margin: 0;
+    margin-left: 10%;
+  }
+  .description {
+    max-width: 40ch;
+  }
+  .burger {
+    display: none;
+  }
+  .contact-button{
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--hText-color);
+  } 
+}
+
+/* Archive */
