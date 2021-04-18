@@ -1,6 +1,7 @@
 
 const navSlide = () => {
   const burger = document.querySelector('.burger')
+  const menuRotate = document.querySelector('.menuRotate')
   const nav = document.querySelector('.nav-links')
   const navLinks = document.querySelectorAll('.nav-links li')
   let closed = true
@@ -20,7 +21,8 @@ const navSlide = () => {
     closed = false
 
     //Animate Burger
-    burger.classList.toggle('toggle')
+    burger.classList.toggle('active')
+    menuRotate.classList.toggle('active')
     //Toggle Nav
     nav.classList.toggle('nav-active')
     //Animate Links
@@ -33,11 +35,12 @@ const navSlide = () => {
       }
     })
   }
-
+  
   function closeNav () {
     closed = true
     //Reset Animated Burger
-    burger.classList.toggle('toggle')
+    burger.classList.toggle('active')
+    menuRotate.classList.toggle('active')
     //Close Nav
     nav.classList.toggle('nav-active')
     // Reset Nav Link Animation

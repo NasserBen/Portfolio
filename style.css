@@ -14,25 +14,13 @@ body {
   background-color: black;
   color: white;
   font-family: "Inter", sans-serif;
+  height: 1000vh;
 }
 
 li {
   list-style: none;
 }
 
-.name h1 {
-  font-size: 1em; /* Review */
-  font-size: clamp(30px, 10vw, 300px); /* Review */
-  font-weight: 900;
-  letter-spacing: 0.5vw;
-  color: var(--hText-color);
-  padding: 0;
-  margin: 0;
-}
-
-.ben {
-  color: var(--pText-color);
-}
  div, p{
    padding: 0;
    margin: 0;
@@ -45,27 +33,105 @@ li {
    color: var(--hText-color);
  }
 
+ a:hover {
+   text-decoration: underline;
+ }
+
+ a:active {
+   color: var(--pText-color);
+ }
+
+ #logo {
+  position: absolute;
+  margin: 3.5% 0 0 3.5%;
+  width: 10%;
+  max-width: 100px;
+  top: 0;
+  left: 0;
+}
+
+/* Navigation */
+nav {
+  background-color: var(--dark-primary);
+  z-index: 10;
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links{
+  margin: 0;
+  padding: 0;
+  margin-top: -5vh;
+  position: absolute;
+  height: 105vh;
+  top: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  font-weight: bold;
+  background: var(--dark-primary);
+  color: var(--hText-color);
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in;
+  font-size: 2.5rem;
+} 
+.nav-links li {
+  margin-left: 3.5%;
+  margin-top: 5%;
+  opacity: 0;
+}
+
+.nav-links li:last-child {
+  margin-bottom: 70px;
+}
+
+.burger {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  right: 0.75rem;
+  top: 0.75rem;
+  cursor: pointer;
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
 .header-container {
-  height: 50vh;
+  margin-top: 10%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-left: 3.5%;
 }
-
-.contact-button{
-  font-weight: bold;
-  margin-top: 5%;
-  color: var(--hText-color);
-}
-
 .intro {
   font-size: clamp(10px, 1vw, 70px);
   font-weight: 100;
 }
 
+h1 {
+  font-size: 1em; /* Review */
+  font-size: clamp(3rem, 10vw, 300px); /* Review */
+  font-weight: 900;
+  letter-spacing: 0.5vw;
+  color: var(--hText-color);
+  padding: 0;
+  margin: 0;
+}
+
 .name {
   font-size: clamp(30px, 10vw, 300px);
+}
+
+.ben {
+  color: var(--pText-color);
 }
 
 .memo {
@@ -76,6 +142,12 @@ li {
   color:  var(--pText-color);
 }
 
+.contact-button{
+  font-weight: bold;
+  margin-top: 5%;
+  color: var(--hText-color);
+}
+
 
 @media(min-width: 500px) {
   .header-container {
@@ -83,63 +155,8 @@ li {
   }
 }
 
-#logo {
-  margin: 3.5% 0 0 3.5%;
-  width: 10%;
-  max-width: 100px;
-}
 /* _________________________________________ */
 
-
-/* Navigation */
-nav {
-  z-index: 10;
-  position: fixed;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav-links{
-  position: absolute;
-  right: 0;
-  height: 95vh;
-  top: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  font-weight: bold;
-  background: var(--dark-primary);
-  color: var(--hText-color);
-  transform: translateX(100%);
-  transition: transform 0.5s ease-in;
-} 
-.nav-links li {
-  opacity: 0;
-}
-.nav-links li:last-child {
-  margin-bottom: 70px;
-}
-
-.burger {
-  display: block;
-  cursor: pointer; 
-}
-
-.burger div {
-  width: 25px;
-  height: 3px;
-  background-color:var(--hText-color);
-  margin: 5px;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-}
-.nav-active {
-  transform: translateX(0%);
-}
 
 
 @media(min-width:400px) {
@@ -163,6 +180,45 @@ nav {
     margin-right: 20px;
   }
 
+}
+
+ /* Work */
+#work {
+  margin-left: 3.5%;
+  margin-right: 3.5%;
+}
+
+#work h1 {
+  font-weight: 700;
+}
+
+#work img {
+  width: 100%;
+}
+
+.project {
+  margin-top: 20vh;
+}
+
+.first {
+  margin-top: 5vh;
+}
+.title {
+  font-weight: 600;
+}
+
+.description {
+  color: var(--pText-color);
+  max-width: 75ch;
+}
+
+.btnContainer {
+  margin-top: 5%;
+}
+
+#work a {
+  font-weight: 700;
+  margin-right: 2rem;
 }
 /* _________________________________________ */
 
@@ -236,7 +292,7 @@ nav {
   fill:none;
   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
   stroke:var(--hText-color);
-  stroke-width:5.5;
+  stroke-width:8;
   stroke-linecap:round;
 }
 
@@ -268,3 +324,13 @@ transition: transform 400ms;
   stroke-dashoffset: -64px;
 }
 /* ____________________________ */
+/* archive */
+/* 
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color:var(--hText-color);
+  margin: 5px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+} */
