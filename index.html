@@ -1,140 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nasser Ben</title>
-    <link rel="icon" type="ico" href="icon.ico">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
-<body>
-    <a href="/"><img src="Logo.svg" alt="Nasser Ben" id="logo"></a>
+    <link rel="icon" type="ico" href="icon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <a href="/"><img src="Logo.svg" alt="Nasser Ben" id="logo" /></a>
     <!-- Navigation -->
     <nav id="nav">
-        <ul class="nav-links" id="nav-links">
-            <li><a href="#work">Work.</a></li>
-            <li><a href="#about">About.</a></li>
-            <li><a href="#contact">Contact.</a></li>
-        </ul>
-        <div class="burger">
-            <svg class="menu menuRotate" viewBox="0 0 100 100" width="42">
-                <path
-                      class="line top"
-                      d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
-                <path
-                      class="line middle"
-                      d="m 30,50 h 40" />
-                <path
-                      class="line bottom"
-                      d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
-              </svg>
-        </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#work">Work.</a></li>
+        <li><a href="#about">About.</a></li>
+        <li><a href="#contact">Contact.</a></li>
+      </ul>
+      <div class="burger">
+        <svg class="menu menuRotate" viewBox="0 0 100 100" width="42">
+          <path
+            class="line top"
+            d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"
+          />
+          <path class="line middle" d="m 30,50 h 40" />
+          <path
+            class="line bottom"
+            d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"
+          />
+        </svg>
+      </div>
     </nav>
     <div class="desktop-menu">
-        <a href="#work"  id="one">Work.</a>
-        <a href="#about" id="two">About.</a>
-        <a href="#contact" id="three">Contact.</a>
+      <a href="#work" id="one">Work.</a>
+      <a href="#about" id="two">About.</a>
+      <a href="#contact" id="three">Contact.</a>
     </div>
-    
 
     <!-- Header -->
     <section id="header">
-        <div class="header-container">
-            <div class="intro"><p>Hey, I'm</p></div>
-            <div class="name">
-                <h1>Nasser <span class="ben">Ben.</span></h1>
-            </div>
-            <div class="memo"><h3 class="typewrite" data-period="2000" data-type='[ "Always Learning.", "Can&lsquo;t stop.", "Won&rsquo;t Stop."]' style="margin: 0;"></h3></div>
-            <div class="contact-button"><a href="#contact">Contact.</a></div> 
+      <div class="header-container">
+        <div class="intro"><p>Hey, I'm</p></div>
+        <div class="name">
+          <h1>Nasser <span class="ben">Ben.</span></h1>
         </div>
+        <div class="memo">
+          <h3
+            class="typewrite"
+            data-period="2000"
+            data-type='[ "Always Learning.", "Can&lsquo;t stop.", "Won&rsquo;t Stop."]'
+            style="margin: 0"
+          ></h3>
+        </div>
+        <div class="contact-button"><a href="#contact">Contact.</a></div>
+      </div>
     </section>
 
     <!-- Work -->
     <section id="work">
-        <h1 data-aos="fade-right"
+      <h1
+        data-aos="fade-right"
         data-aos-offset="300"
-        data-aos-easing="ease-in-sine">Work.</h1>
-        <div class="project first">
-            <img src="project1.png" alt="Image Api">
-            <div class="description-container">
-            <h2 class="title">Detect Faces API</h2>
-            <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, earum asperiores magnam laborum dolores vel eligendi harum laboriosam ullam! Magni, odit illo. Voluptas harum culpa temporibus? In doloribus quam velit!</p>
-            <div class="btnContainer">
-                <a href="https://nasserben.github.io/ImgApi/" class="preview" target="_blank">Live Preview &#8250;</a>
-                <a href="https://github.com/NasserBen/ImgApi" class="preview" target="_blank">View Code &#8250;</a>
-            </div>
+        data-aos-easing="ease-in-sine"
+      >
+        Work.
+      </h1>
+      <div class="project first">
+        <img src="project1.png" alt="Image Api" />
+        <div class="description-container">
+          <h2 class="title">Detect Faces API</h2>
+          <p class="description">
+            This AI, powered by Clarifai, can detect faces in any image address.
+            A big challenge I faced was finding a solution to outline the face
+            detection with CSS using the APIs output. This project solidified my
+            understanding of APIs and manipulation of the DOM. Built using
+            React.
+          </p>
+          <div class="btnContainer">
+            <a
+              href="https://nasserben.github.io/ImgApi/"
+              class="preview"
+              target="_blank"
+              >Live Preview &#8250;</a
+            >
+            <a
+              href="https://github.com/NasserBen/ImgApi"
+              class="preview"
+              target="_blank"
+              >View Code &#8250;</a
+            >
+          </div>
         </div>
+      </div>
+      <div class="project">
+        <img src="project2.png" alt="Image Api" />
+        <div class="description-container">
+          <h2 class="title">Quote Generator</h2>
+          <p class="description">
+            A random quote generator that pulls data from a quote API and
+            displays it using HTML, CSS, and Javascript. One of the challenges I
+            faced was decoding and understanding the JSON output. This project
+            gave me an understanding of APIs.
+          </p>
+          <div class="btnContainer">
+            <a
+              href="https://nasserben.github.io/QuoteGenerator"
+              class="preview"
+              target="_blank"
+              >Live Preview &#8250;</a
+            >
+            <a
+              href="https://github.com/NasserBen/QuoteGenerator"
+              class="preview"
+              target="_blank"
+              >View Code &#8250;</a
+            >
+          </div>
         </div>
-        <div class="project">
-            <img src="project2.png" alt="Image Api">
-            <div class="description-container">
-            <h2 class="title">Quote Generator</h2>
-            <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, earum asperiores magnam laborum dolores vel eligendi harum laboriosam ullam! Magni, odit illo. Voluptas harum culpa temporibus? In doloribus quam velit!</p>
-            <div class="btnContainer">
-                <a href="https://nasserben.github.io/QuoteGenerator" class="preview" target="_blank">Live Preview &#8250;</a>
-                <a href="https://github.com/NasserBen/QuoteGenerator" class="preview" target="_blank">View Code &#8250;</a>
-            </div>
-            </div>
+      </div>
+      <div class="project">
+        <img src="project3.png" alt="Dark Mode" />
+        <div class="description-container">
+          <h2 class="title">Dark Mode Toggle</h2>
+          <p class="description">
+            A webpage I created with Dark mode toggle that saves in user cache.
+            It has a few menu animations too. One of the challenges I faced when
+            creating this was making sure the site was fully responsive. This
+            project taught me how navigation menus work and their best
+            practices. Built using HTML, CSS, and Javascript.
+          </p>
+          <div class="btnContainer">
+            <a
+              href="https://nasserben.github.io/DarkMode/"
+              class="preview"
+              target="_blank"
+              >Live Preview &#8250;</a
+            >
+            <a
+              href="https://github.com/NasserBen/DarkMode"
+              class="preview"
+              target="_blank"
+              >View Code &#8250;</a
+            >
+          </div>
         </div>
-        <div class="project"> 
-            <img src="project1.png" alt="Image Api">
-            <div class="description-container">
-                <h2 class="title">Detect Faces API</h2>
-            <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, earum asperiores magnam laborum dolores vel eligendi harum laboriosam ullam! Magni, odit illo. Voluptas harum culpa temporibus? In doloribus quam velit!</p>
-            <div class="btnContainer">
-                <a href="" class="preview">Live Preview &#8250;</a>
-                <a href="" class="preview">View Code &#8250;</a>
-            </div>
-            </div>
-            
-        </div>
+      </div>
     </section>
 
     <!-- About -->
-    <section id="about" >
-        <h1 class="title" data-aos="fade-right"
+    <section id="about">
+      <h1
+        class="title"
+        data-aos="fade-right"
         data-aos-offset="300"
-        data-aos-easing="ease-in-sine">About.</h1>
-        <p> TL;DR A web developer who loves to learn.</p>
-        <p class="description">I am a web developer and UI/UX designer who has a passion for bringing ideas to life. Great ideas inspire me to learn and get stuff done. I am currently expanding my knowledge in React, Node js, and AWS.</p>
-        <p class="description">When I am not learning, you’ll find me keeping up to date with the latest tech or catch me playing soccer.</p>
+        data-aos-easing="ease-in-sine"
+      >
+        About.
+      </h1>
+      <p>TL;DR A web developer who loves to learn.</p>
+      <p class="description">
+        I am a web developer and UI/UX designer who has a passion for bringing
+        ideas to life. Great ideas inspire me to learn and get stuff done. I am
+        currently expanding my knowledge in React, Node js, and AWS.
+      </p>
+      <p class="description">
+        When I am not learning, you’ll find me keeping up to date with the
+        latest tech or catch me playing soccer.
+      </p>
     </section>
 
     <!-- Contact -->
     <section id="contact">
-        <h1 class="title" data-aos="fade-right"
+      <h1
+        class="title"
+        data-aos="fade-right"
         data-aos-offset="300"
-        data-aos-easing="ease-in-sine">Contact.</h1>
-        <div class= "info-container">
-            <a href="mailto: contact@nasserben.com" target="_blank"><svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12.01 0.00390625H0.444824L6.22745 5.56087L12.0754 0.0194749C12.054 0.0121771 12.0322 0.0069774 12.01 0.00390625Z" fill="white"/>
-                <path d="M6.5081 6.63361C6.34421 6.79018 6.10842 6.79018 5.94453 6.63361L0 0.919922V9.86358C0 10.1502 0.199151 10.3825 0.444825 10.3825H12.01C12.2557 10.3825 12.4549 10.1502 12.4549 9.86358V0.996731L6.5081 6.63361Z" fill="white"/>
-                </svg></a>
-            <p>contact@nasserben.com</p>
-        </div>
-        <div class="info-container">
-            <a href="https://www.linkedin.com/in/nasserben/" target="_blank"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.5566 0.499023H0.898254C0.402138 0.499023 0 0.901161 0 1.39728V12.0556C0 12.5518 0.402138 12.9539 0.898254 12.9539H11.5566C12.0527 12.9539 12.4549 12.5518 12.4549 12.0556V1.39728C12.4549 0.901161 12.0527 0.499023 11.5566 0.499023V0.499023ZM4.41782 9.91316H2.90115V5.35024H4.41782V9.91316ZM3.65953 4.72717H3.64965C3.14071 4.72717 2.81154 4.37682 2.81154 3.93896C2.81154 3.49121 3.15078 3.15055 3.6696 3.15055C4.18843 3.15055 4.50771 3.49121 4.51759 3.93896C4.51759 4.37682 4.18843 4.72717 3.65953 4.72717ZM9.88659 9.91316H8.37011V7.47211C8.37011 6.85864 8.15052 6.44025 7.60176 6.44025C7.1828 6.44025 6.93327 6.72247 6.82361 6.9949C6.78351 7.09239 6.77373 7.22866 6.77373 7.36502V9.91316H5.25716C5.25716 9.91316 5.27702 5.77832 5.25716 5.35024H6.77373V5.9963C6.97527 5.68539 7.33588 5.24315 8.14054 5.24315C9.13838 5.24315 9.88659 5.89529 9.88659 7.29679V9.91316Z" fill="white"/>
-                </svg>
-                </a>
-            <p>linkedin.com/in/nasserben</p>
-        </div>
-        <div class="info-container">
-            <a href="https://github.com/NasserBen" target="_blank"><svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.22744 0.898438C2.78678 0.898438 0 3.7576 0 7.2839C0 10.1057 1.78416 12.4986 4.25801 13.3423C4.56938 13.4024 4.68355 13.2048 4.68355 13.0353C4.68355 12.8836 4.67836 12.4818 4.67577 11.9495C2.9435 12.3345 2.57816 11.0929 2.57816 11.0929C2.29481 10.3559 1.88536 10.1588 1.88536 10.1588C1.32125 9.76293 1.92895 9.77105 1.92895 9.77105C2.55429 9.81545 2.88278 10.429 2.88278 10.429C3.43806 11.4053 4.34052 11.1232 4.69653 10.9602C4.75257 10.547 4.91293 10.266 5.09093 10.1062C3.70792 9.9465 2.25433 9.39741 2.25433 6.95087C2.25433 6.25395 2.49565 5.68429 2.89524 5.23754C2.82518 5.07617 2.615 4.4269 2.94973 3.5475C2.94973 3.5475 3.47128 3.37638 4.66227 4.20218C5.16047 4.0603 5.6898 3.98991 6.21913 3.98666C6.74847 3.98991 7.2778 4.0603 7.77599 4.20218C8.95921 3.37638 9.48075 3.5475 9.48075 3.5475C9.81548 4.4269 9.6053 5.07617 9.54303 5.23754C9.94003 5.68429 10.1813 6.25395 10.1813 6.95087C10.1813 9.40391 8.72568 9.94379 7.34007 10.1008C7.55803 10.2925 7.76042 10.684 7.76042 11.2824C7.76042 12.1369 7.75264 12.8235 7.75264 13.0309C7.75264 13.1983 7.86162 13.3981 8.18078 13.3342C10.6723 12.4959 12.4549 10.1014 12.4549 7.2839C12.4549 3.7576 9.66654 0.898438 6.22744 0.898438Z" fill="white"/>
-                </svg>
-                </a>
-            <p>github.com/nasserben</p>
-        </div>
+        data-aos-easing="ease-in-sine"
+      >
+        Contact.
+      </h1>
+      <div class="info-container">
+        <a href="mailto: contact@nasserben.com" target="_blank"
+          ><svg
+            width="13"
+            height="11"
+            viewBox="0 0 13 11"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.01 0.00390625H0.444824L6.22745 5.56087L12.0754 0.0194749C12.054 0.0121771 12.0322 0.0069774 12.01 0.00390625Z"
+              fill="white"
+            />
+            <path
+              d="M6.5081 6.63361C6.34421 6.79018 6.10842 6.79018 5.94453 6.63361L0 0.919922V9.86358C0 10.1502 0.199151 10.3825 0.444825 10.3825H12.01C12.2557 10.3825 12.4549 10.1502 12.4549 9.86358V0.996731L6.5081 6.63361Z"
+              fill="white"
+            /></svg></a>
+        <p>contact@nasserben.com</p>
+      </div>
+      <div class="info-container">
+        <a href="https://www.linkedin.com/in/nasserben/" target="_blank"
+          ><svg
+            width="13"
+            height="13"
+            viewBox="0 0 13 13"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11.5566 0.499023H0.898254C0.402138 0.499023 0 0.901161 0 1.39728V12.0556C0 12.5518 0.402138 12.9539 0.898254 12.9539H11.5566C12.0527 12.9539 12.4549 12.5518 12.4549 12.0556V1.39728C12.4549 0.901161 12.0527 0.499023 11.5566 0.499023V0.499023ZM4.41782 9.91316H2.90115V5.35024H4.41782V9.91316ZM3.65953 4.72717H3.64965C3.14071 4.72717 2.81154 4.37682 2.81154 3.93896C2.81154 3.49121 3.15078 3.15055 3.6696 3.15055C4.18843 3.15055 4.50771 3.49121 4.51759 3.93896C4.51759 4.37682 4.18843 4.72717 3.65953 4.72717ZM9.88659 9.91316H8.37011V7.47211C8.37011 6.85864 8.15052 6.44025 7.60176 6.44025C7.1828 6.44025 6.93327 6.72247 6.82361 6.9949C6.78351 7.09239 6.77373 7.22866 6.77373 7.36502V9.91316H5.25716C5.25716 9.91316 5.27702 5.77832 5.25716 5.35024H6.77373V5.9963C6.97527 5.68539 7.33588 5.24315 8.14054 5.24315C9.13838 5.24315 9.88659 5.89529 9.88659 7.29679V9.91316Z"
+              fill="white"
+            />
+          </svg>
+        </a>
+        <p>linkedin.com/in/nasserben</p>
+      </div>
+      <div class="info-container">
+        <a href="https://github.com/NasserBen" target="_blank"
+          ><svg
+            width="13"
+            height="14"
+            viewBox="0 0 13 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6.22744 0.898438C2.78678 0.898438 0 3.7576 0 7.2839C0 10.1057 1.78416 12.4986 4.25801 13.3423C4.56938 13.4024 4.68355 13.2048 4.68355 13.0353C4.68355 12.8836 4.67836 12.4818 4.67577 11.9495C2.9435 12.3345 2.57816 11.0929 2.57816 11.0929C2.29481 10.3559 1.88536 10.1588 1.88536 10.1588C1.32125 9.76293 1.92895 9.77105 1.92895 9.77105C2.55429 9.81545 2.88278 10.429 2.88278 10.429C3.43806 11.4053 4.34052 11.1232 4.69653 10.9602C4.75257 10.547 4.91293 10.266 5.09093 10.1062C3.70792 9.9465 2.25433 9.39741 2.25433 6.95087C2.25433 6.25395 2.49565 5.68429 2.89524 5.23754C2.82518 5.07617 2.615 4.4269 2.94973 3.5475C2.94973 3.5475 3.47128 3.37638 4.66227 4.20218C5.16047 4.0603 5.6898 3.98991 6.21913 3.98666C6.74847 3.98991 7.2778 4.0603 7.77599 4.20218C8.95921 3.37638 9.48075 3.5475 9.48075 3.5475C9.81548 4.4269 9.6053 5.07617 9.54303 5.23754C9.94003 5.68429 10.1813 6.25395 10.1813 6.95087C10.1813 9.40391 8.72568 9.94379 7.34007 10.1008C7.55803 10.2925 7.76042 10.684 7.76042 11.2824C7.76042 12.1369 7.75264 12.8235 7.75264 13.0309C7.75264 13.1983 7.86162 13.3981 8.18078 13.3342C10.6723 12.4959 12.4549 10.1014 12.4549 7.2839C12.4549 3.7576 9.66654 0.898438 6.22744 0.898438Z"
+              fill="white"
+            />
+          </svg>
+        </a>
+        <p>github.com/nasserben</p>
+      </div>
     </section>
-   
+
     <!-- Footer -->
-    <p class="footer" style="text-align: right; margin: 0.5rem; color: var(--pText-color); margin-top: 20vh">&copy; <script>document.write(new Date().getFullYear())</script> Nasser Ben</p>
+    <p
+      class="footer"
+      style="
+        text-align: right;
+        margin: 0.5rem;
+        color: var(--pText-color);
+        margin-top: 20vh;
+      "
+    >
+      &copy;
+      <script>
+        document.write(new Date().getFullYear());
+      </script>
+      Nasser Ben
+    </p>
     <!-- Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init();</script>
+    <script>
+      AOS.init();
+    </script>
     <script src="nav.js"></script>
     <script src="memo.js"></script>
-</body>
+  </body>
 </html>
