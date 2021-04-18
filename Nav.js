@@ -44,5 +44,46 @@ const navSlide = () => {
     navLinks.forEach(link => (link.style.animation = ''))
   }
 }
+
+// For Desktop Menu
+window.addEventListener("scroll", function() {
+  const desktopMenu = document.querySelector('.desktop-menu')
+  if(window.innerWidth >= 600) {
+      const contactBtnHeader = document.querySelector('.contact-button')
+      const workSection = document.getElementById("work")
+      const aboutSection = document.getElementById("about")
+      const one = document.getElementById("one")
+      const two = document.getElementById("two")
+      const three = document.getElementById("three")
+      
+      // Adding or removing menu classes depending on current scroll section
+      if(window.scrollY > (contactBtnHeader.offsetHeight + contactBtnHeader.offsetTop)){
+          desktopMenu.classList.add('desktop-menu-active')
+          one.classList.add('current-section')
+      } else {
+          desktopMenu.classList.remove('desktop-menu-active')
+          one.classList.remove('current-section')  
+      }
+  
+      if(window.scrollY > (workSection.offsetHeight + workSection.offsetTop)&& window.scrollY < (aboutSection.offsetHeight + aboutSection.offsetTop)){
+          one.classList.remove('current-section')
+          two.classList.add('current-section')
+      } else {
+          two.classList.remove('current-section')
+      }
+
+      if(window.scrollY > (aboutSection.offsetHeight + aboutSection.offsetTop)){
+          one.classList.remove('current-section')
+          three.classList.add('current-section')
+      } else {
+          three.classList.remove('current-section')
+      }
+
+  }
+  else {
+      desktopMenu.classList.remove('desktop-menu-active')
+  }
+});
+
 // On load
 navSlide()
