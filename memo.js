@@ -53,3 +53,15 @@ window.onload = function() {
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
     document.body.appendChild(css);
 };
+
+
+window.addEventListener("scroll", function() {
+    const contact = document.querySelector('.contact-button')
+    const floatingContact = document.querySelector('.floating-contact')
+    if(window.scrollY > (contact.offsetHeight + contact.offsetTop)){
+        floatingContact.classList.add('contact-active')
+    } else {
+        floatingContact.classList.remove('contact-active')
+    }
+  });
+
