@@ -56,12 +56,45 @@ window.onload = function() {
 
 
 window.addEventListener("scroll", function() {
-    const contact = document.querySelector('.contact-button')
     const floatingContact = document.querySelector('.floating-contact')
-    if(window.scrollY > (contact.offsetHeight + contact.offsetTop)){
-        floatingContact.classList.add('contact-active')
-    } else {
+    if(window.innerWidth >= 600) {
+        console.log("LOG")
+        const contactBtnHeader = document.querySelector('.contact-button')
+       
+        const work = document.getElementById("work")
+        const about = document.getElementById("about")
+        const contact = document.getElementById("contact")
+        const one = document.getElementById("one")
+        const two = document.getElementById("two")
+        const three = document.getElementById("three")
+        if(window.scrollY > (contactBtnHeader.offsetHeight + contactBtnHeader.offsetTop)){
+            floatingContact.classList.add('contact-active')
+            one.classList.add('current-section')
+        } else {
+            floatingContact.classList.remove('contact-active')
+            one.classList.remove('current-section')
+            
+        }
+    
+
+        if(window.scrollY > (work.offsetHeight + work.offsetTop)&& window.scrollY < (about.offsetHeight + about.offsetTop)){
+            one.classList.remove('current-section')
+            two.classList.add('current-section')
+        } else {
+            two.classList.remove('current-section')
+        }
+
+        if(window.scrollY > (about.offsetHeight + about.offsetTop)){
+            one.classList.remove('current-section')
+            three.classList.add('current-section')
+        } else {
+            three.classList.remove('current-section')
+        }
+
+    }
+    else {
         floatingContact.classList.remove('contact-active')
     }
   });
+
 
