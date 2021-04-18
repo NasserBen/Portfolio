@@ -329,7 +329,53 @@ transition: transform 400ms;
     transform: translateX(0px)
   }
 }
+@media (max-width: 344px) {
+  .intro {
+    font-size: 0.5rem;
+    margin-left: -0.25%;
+  }
+  
+  h1 {
+   font-size: 2rem;
+  }
 
+  .memo {
+    font-size: 0.75rem;
+  }
+
+  .contact-button a{
+    font-size: 0.75rem;
+  }
+
+  #work .title {
+    font-size: 1rem;
+  }
+  .description {
+    font-size: 2rem;
+  }
+
+  #work .description {
+    font-size: calc(0.5rem + 1vw);
+  }
+  #work .btnContainer {
+    font-size: calc(0.5rem + 1vw);
+  }
+
+  #about p {
+    font-size: calc(0.5rem + 1vw);
+  }
+
+  #contact svg {
+    width: 42px;
+    height: auto;
+  }
+
+  #contact p {
+    margin-left: 5%;
+    font-size: calc(0.25rem + 3vw);
+  }
+
+}
 @media(min-width:1025px) {
   #logo {
     margin-left: 10%;
