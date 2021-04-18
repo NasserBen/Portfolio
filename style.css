@@ -13,7 +13,7 @@ html {
 body {
   margin: 0;
   background-color: black;
-  color: white;
+  color: var(--hText-color);
   font-family: "Inter", sans-serif;
 }
 
@@ -24,7 +24,6 @@ li {
  div, p{
    padding: 0;
    margin: 0;
-   line-height: 95%;
  }
 
  a {
@@ -56,11 +55,6 @@ li {
   max-width: 100px;
   top: 0;
   left: 0;
-}
-
-svg{
-  width: 42px;
-  height: auto;
 }
 
 /* Navigation */
@@ -112,6 +106,7 @@ nav {
   transform: translateX(0%);
 }
 
+/* Header */
 .header-container {
   margin-top: 10%;
   height: 100vh;
@@ -121,22 +116,19 @@ nav {
   margin-left: 3.5%;
 }
 .intro {
-  font-size: clamp(10px, 1vw, 70px);
+  font-size: 0.75rem;
   font-weight: 100;
+  margin-bottom: -1%;
 }
 
 h1 {
-  font-size: 1em; /* Review */
-  font-size: clamp(3rem, 10vw, 300px); /* Review */
+  font-size: 3.25rem;
+  font-size: calc(1rem + 10vw);
   font-weight: 900;
   letter-spacing: 0.5vw;
   color: var(--hText-color);
   padding: 0;
-  margin: 0;
-}
-
-.name {
-  font-size: clamp(30px, 10vw, 300px);
+  margin: 0 0 0 -0.5%;
 }
 
 .ben {
@@ -146,8 +138,8 @@ h1 {
 .memo {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: bold;
-  font-size: clamp(1rem, 2.5vw, 6rem);
-  margin-top: 0.5%;
+  font-size: calc(1rem + 2vw);
+  margin-top: -2%;
   color:  var(--pText-color);
 }
 
@@ -156,12 +148,9 @@ h1 {
 }
 .contact-button a{
   font-weight: bold;
-  font-size: clamp(1rem,2.5vw, 7rem);
+  font-size: calc(1rem + 2vw);
   color: var(--hText-color);
 }
-
-
-
 
  /* Work */
 #work {
@@ -252,11 +241,11 @@ h1 {
 
 }
 
-
 #contact svg:active path {
   
   fill: var(--pText-color);
 }
+
 #contact p {
   color: var(--pText-color);
   margin-left: 1rem;
@@ -276,7 +265,7 @@ h1 {
 .desktop-menu-active {
   visibility: visible;
   opacity: 1;
-  }
+}
 
 /* Toggle Burger */
 .menu {
@@ -341,24 +330,32 @@ transition: transform 400ms;
   }
 }
 
-@media(max-width:200px) {
-/* add */
-
-
-}
-
-@media (max-width: 1000px) {
-  
-  .contact-button {
-    font-size: 1.75rem;
-  }
-}
-@media(min-width:600px) {
+@media(min-width:1025px) {
   #logo {
     margin-left: 10%;
   }
+
+  .intro {
+    margin-top: 30vh;
+    font-size: 1rem;
+    margin-left: -0.20%;
+  }
+  
+  h1 {
+    font-size: 6rem;
+  }
+
+  .memo {
+    font-size: 2rem;
+    margin-left: -0.20%;
+  }
+
+  .contact-button a{
+    font-size: 2rem;
+  }
+
   #work {
-    margin: 0;
+    margin-top: 50vh;
     margin-left: 10%;
   }
   #about {
@@ -374,7 +371,7 @@ transition: transform 400ms;
     margin-left: 10%;
   }
   .description {
-    max-width: 40ch;
+    max-width: 45ch;
   }
   .burger {
     display: none;
@@ -409,7 +406,67 @@ transition: transform 400ms;
     color: var(--hText-color);
     transition: all 0.2s linear;
   }
-
 }
 
-/* Archive */
+@media (min-width: 1500px) {
+  
+  #logo  {
+    max-width: 175px;
+  }
+  .intro {
+    font-size: 2.5rem;
+    margin-left: -0.25%;
+  }
+  
+  h1 {
+    font-size: 10rem;
+  }
+
+  .memo {
+    font-size: 4rem;
+  }
+
+  .contact-button a{
+    font-size: 4rem;
+  }
+
+  .desktop-menu {
+    font-size: 1.5rem;
+  }
+
+  a.current-section { 
+    font-size: 2.5rem;
+  }
+
+  #work .title {
+    font-size: 4rem;
+  }
+  .description {
+    font-size: 2rem;
+  }
+
+  #work img {
+    max-width: 1000px;
+  }
+
+  #work .description {
+    font-size: calc(2rem + 0.5vw);
+  }
+  #work .btnContainer {
+    font-size: calc(2rem + 0.5vw);
+  }
+
+  #about p {
+    font-size: calc(2rem + 0.5vw);
+  }
+
+  #contact svg {
+    width: 3vw;
+    height: auto;
+  }
+
+  #contact p {
+    margin-left: 1%;
+    font-size: calc(2rem + 0.5vw);
+  }
+}
