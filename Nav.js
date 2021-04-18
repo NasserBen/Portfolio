@@ -27,12 +27,9 @@ const navSlide = () => {
     nav.classList.toggle('nav-active')
     //Animate Links
     navLinks.forEach((link, i) => {
-      // Add nav link animations
-      link.style.animation = `navLinkFade 0.5s ease forwards  ${i / 7 + 0.3}s`
-      // Check if darkmode switch toggle, else close nav;
-      if (link.nextElementSibling) {
-        link.addEventListener('click', closeNav)
-      }
+    // Add nav link animations
+    link.style.animation = `navLinkFade 0.5s ease forwards  ${i / 7 + 0.3}s`
+    link.addEventListener('click', closeNav)
     })
   }
   
