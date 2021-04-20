@@ -123,13 +123,26 @@ nav {
 }
 
 h1 {
-  font-size: 3.25rem;
   font-size: calc(1rem + 10vw);
   font-weight: 900;
   letter-spacing: 0.5vw;
   color: var(--hText-color);
   padding: 0;
   margin: 0 0 0 -0.5%;
+}
+
+h2 {
+  font-size: calc(1rem + 10vw);
+  font-weight: 700;
+  letter-spacing: 0.5vw;
+  color: var(--hText-color);
+  padding: 0;
+  margin: 0 0 0 -0.5%;
+}
+
+h4 {
+  margin: 5% 0 2% 0;
+  padding: 0;
 }
 
 .ben {
@@ -168,6 +181,9 @@ h1 {
   width: 70%;
   max-height: 50%;
 }
+#work img:hover {
+  opacity: 0.5;
+}
 
 .project {
   margin-top: 20vh;
@@ -176,7 +192,9 @@ h1 {
 .first {
   margin-top: 5vh;
 }
-.title {
+.description-container .title {
+  font-size: 1.5rem;
+  padding: 2% 0;
   font-weight: 600;
 }
 
@@ -347,13 +365,6 @@ h1 {
     font-size: 0.75rem;
   }
 
-  #work .title {
-    font-size: 1rem;
-  }
-  .description {
-    font-size: 2rem;
-  }
-
   #work .description {
     font-size: calc(0.5rem + 1vw);
   }
@@ -388,6 +399,13 @@ h1 {
 
   h1 {
     font-size: 6rem;
+  }
+  h2 {
+    font-size: 6rem;
+  }
+  h4 {
+    margin: 0;
+    padding: 0;
   }
 
   .memo {
@@ -464,7 +482,8 @@ h1 {
     margin-left: -0.25%;
   }
 
-  h1 {
+  h1,
+  h2 {
     font-size: 10rem;
   }
 
