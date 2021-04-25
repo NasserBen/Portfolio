@@ -96,8 +96,7 @@ const navSlide = () => {
 
 // For Desktop Menu
 window.addEventListener("scroll", function() {
-  const desktopMenu = document.querySelector('.desktop-menu')
-  
+  const desktopMenu = document.querySelector('.desktop-menu') 
   if(window.innerWidth >= 1025) { //Enable desktop menu
       const contactBtnHeader = document.querySelector('.contact-button')
       const workSection = document.getElementById("work")
