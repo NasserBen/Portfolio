@@ -70,7 +70,6 @@ const navSlide = () => {
   })
 
   function openNav () {
-  
     //Animate Burger
     burger.classList.toggle('active')
     menuRotate.classList.toggle('active')
