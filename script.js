@@ -68,7 +68,6 @@ const navSlide = () => {
    
     if (e.target == e.currentTarget) closeNav() 
   })
-
   function openNav () {
     //Animate Burger
     burger.classList.toggle('active')
