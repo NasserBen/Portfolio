@@ -82,7 +82,6 @@ const navSlide = () => {
     link.addEventListener('click', closeNav)
     })
   }
- 
   function closeNav () {
     //Reset Animated Burger
     burger.classList.toggle('active')
