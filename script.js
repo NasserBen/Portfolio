@@ -68,6 +68,7 @@ const navSlide = () => {
    
     if (e.target == e.currentTarget) closeNav() 
   })
+  
   function openNav () {
     //Animate Burger
     burger.classList.toggle('active')
@@ -81,6 +82,7 @@ const navSlide = () => {
     link.addEventListener('click', closeNav)
     })
   }
+
   function closeNav () {
     //Reset Animated Burger
     burger.classList.toggle('active')
