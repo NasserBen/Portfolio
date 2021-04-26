@@ -55,7 +55,6 @@ window.onload = function() {
   document.body.appendChild(css);
 };
 
-
 //Navigation
 const navSlide = () => {
   const burger = document.querySelector('.burger')
@@ -68,7 +67,7 @@ const navSlide = () => {
    
     if (e.target == e.currentTarget) closeNav() 
   })
-  
+
   function openNav () {
     //Animate Burger
     burger.classList.toggle('active')
@@ -98,6 +97,7 @@ const navSlide = () => {
 window.addEventListener("scroll", function() {
   const desktopMenu = document.querySelector('.desktop-menu') 
   if(window.innerWidth >= 1025) { //Enable desktop menu
+
       const contactBtnHeader = document.querySelector('.contact-button')
       const workSection = document.getElementById("work")
       const aboutSection = document.getElementById("about")
