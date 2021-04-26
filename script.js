@@ -91,6 +91,7 @@ const navSlide = () => {
     navLinks.forEach(link => (link.style.animation = ''))
   }
 }
+
 // For Desktop Menu
 window.addEventListener("scroll", function() {
   const desktopMenu = document.querySelector('.desktop-menu') 
