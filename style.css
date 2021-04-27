@@ -178,8 +178,7 @@ h4 {
 }
 
 #work img {
-  width: 70%;
-  max-height: 50%;
+  width: 100%;
 }
 #work img:hover {
   opacity: 0.5;
@@ -386,11 +385,20 @@ h4 {
     font-size: calc(0.25rem + 3vw);
   }
 }
+
+@media (min-width: 600px) {
+  #work img {
+    width: 80%;
+  }
+}
+
 @media (min-width: 1025px) {
   #logo {
     margin-left: 10%;
   }
-
+  #work img {
+    max-width: 500px;
+  }
   .intro {
     margin-top: 30vh;
     font-size: 1rem;
