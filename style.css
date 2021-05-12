@@ -425,7 +425,7 @@ textarea:focus {
     gap: 5rem;
   }
 
-  .project:nth-child(even) .description-container{
+  .project:nth-child(even) .description-container {
     order: -1;
   }
 
