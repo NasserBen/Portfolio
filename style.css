@@ -116,8 +116,8 @@ nav {
   margin: 0;
   padding: 0;
   position: fixed;
-  right: 0.35rem;
-  top: 0.55rem;
+  right: 1%;
+  top: 2.5%;
   cursor: pointer;
 }
 
@@ -176,6 +176,7 @@ h2 {
 
 #work img {
   width: 100%;
+  max-width: 425px;
   margin-bottom: 1rem;
 }
 
@@ -190,7 +191,7 @@ h2 {
 
 .description {
   color: var(--pText-color);
-  max-width: 45ch;
+  max-width: 42ch;
   margin-bottom: 1rem;
 }
 
@@ -205,7 +206,6 @@ h2 {
 /* About */
 #about {
   padding-top: 30vh;
-  padding-bottom: 50vh;
 }
 
 #about p {
@@ -244,6 +244,7 @@ h2 {
 form {
   margin-top: 15vh;
   color: var(--pText-color);
+  max-width: 425px;
 }
 
 input,
@@ -262,13 +263,17 @@ textarea {
 
 input:focus,
 input:active,
-textarea:active, 
+textarea:active,
 textarea:focus {
   outline: none;
   border-right: 1px;
   border-bottom: 1px;
   border: 1px solid var(--hText-color);
   background-color: var(--dark-primary);
+}
+
+#contact {
+  margin-top: 40vh;
 }
 
 #contact button {
@@ -366,15 +371,51 @@ textarea:focus {
   }
 }
 
-@media (max-width: 344px) {
+@media (min-width: 360px) {
+  h1 {
+    font-size: 3rem;
+  }
+  .hey {
+    font-size: 0.75rem;
+  }
+  .memo {
+    font-size: 1rem;
+  }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 500px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+  .hey {
+    font-size: 1rem;
+    margin-top: 10vh;
+  }
+  .memo {
+    font-size: 1.5rem;
+  }
+  .contact-button {
+    font-size: 1.25rem;
+  }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1367px) {
   .burger {
     display: none;
+  }
+
+  .contact-wrapper {
+    display: flex;
+    gap: 10rem;
+  }
+  .socials {
+    order: 2;
+  }
+  form {
+    margin-top: 0;
+  }
+  #logo {
+    margin-top: 30px;
   }
 
   .desktop-menu {
