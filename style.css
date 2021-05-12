@@ -67,7 +67,7 @@ a:focus {
 
 #logo {
   position: absolute;
-  margin: 3.5% 0 0 7%;
+  margin: 7% 0 0 7%;
   width: 20%;
   max-width: 100px;
   top: 0;
@@ -89,7 +89,7 @@ nav {
   margin: 0;
   padding: 0;
   margin-top: -5vh;
-  margin-left: -3.5%;
+  margin-left: -7%;
   position: absolute;
   height: 105vh;
   top: 100%;
@@ -107,7 +107,7 @@ nav {
 }
 
 .nav-links li {
-  margin-left: 3.5%;
+  margin-left: 7%;
   margin-top: 5%;
   opacity: 0;
 }
@@ -203,10 +203,9 @@ h2 {
 }
 
 /* About */
-
 #about {
-  margin-top: 50vh;
-  margin-bottom: 50vh;
+  padding-top: 30vh;
+  padding-bottom: 50vh;
 }
 
 #about p {
@@ -220,7 +219,7 @@ h2 {
   color: var(--pText-color);
 }
 
-.info-container{
+.info-container {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -244,14 +243,16 @@ h2 {
 
 form {
   margin-top: 15vh;
+  color: var(--pText-color);
 }
 
-input, textarea {
+input,
+textarea {
   font-size: 1rem;
   font-family: "Inter", sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   width: 100%;
-  color: var(--pText-color);
+  color: var(--hText-color);
   background-color: var(--dark-primary);
   border: 1px solid var(--hText-color);
   border-right: 0;
@@ -259,12 +260,16 @@ input, textarea {
   margin-bottom: 1rem;
 }
 
-input:focus, textarea:focus {
+input:focus,
+input:active,
+textarea:active, 
+textarea:focus {
   outline: none;
   border-right: 1px;
   border-bottom: 1px;
   border: 1px solid var(--hText-color);
-} 
+  background-color: var(--dark-primary);
+}
 
 #contact button {
   margin: 0;
@@ -275,8 +280,12 @@ input:focus, textarea:focus {
   color: var(--hText-color);
   outline: none;
   border: none;
+  cursor: pointer;
 }
 
+#contact button:hover {
+  text-decoration: underline;
+}
 
 /* Desktop Nav */
 .desktop-menu {
@@ -381,10 +390,10 @@ input:focus, textarea:focus {
     transition: all 0.5s linear;
   }
 
-  /* .desktop-menu-active {
+  .desktop-menu-active {
     visibility: visible;
     opacity: 1;
-  } */
+  }
 
   .current-section,
   a.current-section {
