@@ -2,7 +2,7 @@
 
 :root {
   --hText-color: white;
-  --pText-color: #525252;
+  --pText-color: #86868b;
   --dark-primary: black;
 }
 
@@ -18,7 +18,7 @@ html {
 
 body {
   margin: 0;
-  background-color: var(--dark-primary);
+  background-color: rgb(15, 15, 15);
   color: var(--hText-color);
   font-family: "Inter", sans-serif;
   padding: 0 7%;
@@ -140,13 +140,13 @@ h1 {
 
 .hey {
   font-size: 0.5rem;
-  font-weight: lighter;
+  color: var(--pText-color);
   margin-bottom: -0.5em;
   margin-left: -0.03em;
 }
 
 .ben {
-  color: var(--pText-color);
+  color: #525252;
 }
 
 .memo {
@@ -157,13 +157,25 @@ h1 {
   margin-top: -0.5em;
 }
 
-.contact-button {
-  margin-top: 2.5rem;
+.resume-button {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: var(--hText-color);
+  border-radius: 0.2rem;
+  max-width: 100px;
+  color: var(--dark-primary) !important;
+}
+
+.resume-button:hover {
+  background-color: var(--pText-color);
 }
 
 /* Work */
 h2 {
-  font-size: 2.5em;
+  font-size: 3em;
   font-weight: 700;
   margin-left: -0.03em;
   color: var(--hText-color);
@@ -187,6 +199,27 @@ h2 {
 .project-title {
   font-size: 1.25rem;
   margin-bottom: 0.5em;
+}
+
+.tag-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  max-width: 400px;
+  font-size: small;
+}
+
+.tag {
+  background-color: var(--hText-color);
+  color: var(--dark-primary);
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.tag:hover {
+  background-color: var(--pText-color);
 }
 
 .description {
@@ -213,8 +246,30 @@ h2 {
   margin-bottom: 1rem;
 }
 
+.img-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+#about img {
+  max-width: 100px;
+  border-radius: 100%;
+}
+
+.about-list {
+  list-style-type: none;
+  font-size: small;
+  padding: 0;
+  margin-left: 0.5rem;
+}
+
 /* Contact */
-#contact p {
+#contact {
+  margin-top: 50vh;
+}
+
+#contact a {
   display: inline-block;
   color: var(--pText-color);
 }
@@ -239,57 +294,6 @@ h2 {
 
 #contact svg:active path {
   fill: var(--pText-color);
-}
-
-form {
-  margin-top: 15vh;
-  color: var(--pText-color);
-  max-width: 425px;
-}
-
-input,
-textarea {
-  font-size: 1rem;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  width: 100%;
-  color: var(--hText-color);
-  background-color: var(--dark-primary);
-  border: 1px solid var(--hText-color);
-  border-right: 0;
-  border-bottom: 0;
-  margin-bottom: 1rem;
-}
-
-input:focus,
-input:active,
-textarea:active,
-textarea:focus {
-  outline: none;
-  border-right: 1px;
-  border-bottom: 1px;
-  border: 1px solid var(--hText-color);
-  background-color: var(--dark-primary);
-}
-
-#contact {
-  margin-top: 75vh;
-}
-
-#contact button {
-  margin: 0;
-  padding: 0;
-  font-size: 1rem;
-  font-weight: 700;
-  background-color: var(--dark-primary);
-  color: var(--hText-color);
-  outline: none;
-  border: none;
-  cursor: pointer;
-}
-
-#contact button:hover {
-  text-decoration: underline;
 }
 
 /* Desktop Nav */
@@ -394,7 +398,7 @@ textarea:focus {
   .memo {
     font-size: 1.5rem;
   }
-  .contact-button {
+  .resume-button {
     font-size: 1.25rem;
   }
 }
@@ -404,10 +408,6 @@ textarea:focus {
     display: none;
   }
 
-  .contact-wrapper {
-    display: flex;
-    gap: 10rem;
-  }
   .socials {
     order: 2;
   }
@@ -427,6 +427,43 @@ textarea:focus {
 
   .project:nth-child(even) .description-container {
     order: -1;
+  }
+
+  .about-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .about-wrapper .img-section {
+    order: 1;
+  }
+
+  #about img {
+    max-width: 200px;
+  }
+
+  .img-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 55%;
+    margin-bottom: 0rem;
+  }
+
+  .about-list {
+    list-style-type: none;
+    text-align: center;
+    font-size: medium;
+    margin-top: 1rem;
+    padding: 0;
+  }
+
+  .p-section {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .desktop-menu {
