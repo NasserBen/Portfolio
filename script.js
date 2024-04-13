@@ -94,50 +94,53 @@ const navSlide = () => {
 };
 
 // For Desktop Menu
-window.addEventListener("scroll", function () {
-  const desktopMenu = document.querySelector(".desktop-menu");
-  if (window.innerWidth >= 1025) {
-    //Enable desktop menu
+const desktopMenu = document.querySelector(".desktop-menu");
+const contactBtnHeader = document.querySelector(".resume-button");
+const workSection = document.getElementById("work");
+const aboutSection = document.getElementById("about");
+const sections = [
+  document.getElementById("one"),
+  document.getElementById("two"),
+  document.getElementById("three"),
+];
 
-    const contactBtnHeader = document.querySelector(".contact-button");
-    const workSection = document.getElementById("work");
-    const aboutSection = document.getElementById("about");
-    const one = document.getElementById("one");
-    const two = document.getElementById("two");
-    const three = document.getElementById("three");
+function toggleSectionClass(index) {
+  sections.forEach((section, i) => {
+    if (i === index) {
+      section.classList.add("current-section");
+    } else {
+      section.classList.remove("current-section");
+    }
+  });
+}
 
-    // Adding or removing menu classes depending on current scroll section
-    if (
-      window.scrollY >
-      contactBtnHeader.offsetHeight + contactBtnHeader.offsetTop
-    ) {
+function updateMenuOnScroll() {
+  const scrollY = window.scrollY;
+  const contactBtnOffset =
+    contactBtnHeader.offsetHeight + contactBtnHeader.offsetTop;
+  const workSectionOffset = workSection.offsetHeight + workSection.offsetTop;
+  const aboutSectionOffset = aboutSection.offsetHeight + aboutSection.offsetTop;
+  const isDesktop = window.innerWidth >= 1025;
+
+  if (isDesktop) {
+    if (scrollY > contactBtnOffset) {
       desktopMenu.classList.add("desktop-menu-active");
-      one.classList.add("current-section");
+      toggleSectionClass(0);
     } else {
       desktopMenu.classList.remove("desktop-menu-active");
-      one.classList.remove("current-section");
     }
 
-    if (
-      window.scrollY > workSection.offsetHeight + workSection.offsetTop &&
-      window.scrollY < aboutSection.offsetHeight + aboutSection.offsetTop
-    ) {
-      one.classList.remove("current-section");
-      two.classList.add("current-section");
-    } else {
-      two.classList.remove("current-section");
-    }
-
-    if (window.scrollY > aboutSection.offsetHeight + aboutSection.offsetTop) {
-      one.classList.remove("current-section");
-      three.classList.add("current-section");
-    } else {
-      three.classList.remove("current-section");
+    if (scrollY > workSectionOffset && scrollY < aboutSectionOffset) {
+      toggleSectionClass(1);
+    } else if (scrollY > aboutSectionOffset) {
+      toggleSectionClass(2);
     }
   } else {
-    // Remove desktop menu
     desktopMenu.classList.remove("desktop-menu-active");
   }
-});
+}
+
+window.addEventListener("scroll", updateMenuOnScroll);
+
 // On load
 navSlide();
