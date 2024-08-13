@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Nasser Ben Resume" />
-    <link rel="icon" type="svg" href="../Logo.svg" />
+    <link rel="icon" type="image/svg+xml" href="../Logo.svg" />
     <title>Nasser Ben Resume</title>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -31,6 +31,12 @@
         width: 100%;
       }
 
+      iframe {
+        border: none;
+        width: 100%;
+        height: 100%;
+      }
+
       .fallback-message {
         display: none;
         font-size: 1.5em;
@@ -41,24 +47,14 @@
   </head>
   <body>
     <main id="pdf-container">
-      <object
-        data="https://d2x99j4e5epq4y.cloudfront.net/Nasser_Ben_Resume.pdf"
-        type="application/pdf"
-        frameborder="0"
-        width="100%"
-        height="100%"
-        onerror="document.getElementById('fallback-message').style.display = 'block';"
-      >
-        <embed
-          src="https://d2x99j4e5epq4y.cloudfront.net/Nasser_Ben_Resume.pdf"
-          type="application/pdf"
-          width="100%"
-          height="100%"
-        />
-      </object>
+      <iframe
+        src="https://docs.google.com/gview?url=https://d2x99j4e5epq4y.cloudfront.net/Nasser_Ben_Resume.pdf&embedded=true"
+        onload="this.style.display='block';"
+      ></iframe>
       <div id="fallback-message" class="fallback-message">
         <p>
-          It seems your browser does not support PDFs. You can download the PDF
+          It seems your browser does not support displaying PDFs. You can
+          download the PDF
           <a href="https://d2x99j4e5epq4y.cloudfront.net/Nasser_Ben_Resume.pdf"
             >here</a
           >.
