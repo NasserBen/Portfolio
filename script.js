@@ -93,54 +93,104 @@ const navSlide = () => {
   }
 };
 
-// For Desktop Menu
-const desktopMenu = document.querySelector(".desktop-menu");
-const contactBtnHeader = document.querySelector(".resume-button");
-const workSection = document.getElementById("work");
-const aboutSection = document.getElementById("about");
-const sections = [
-  document.getElementById("one"),
-  document.getElementById("two"),
-  document.getElementById("three"),
-];
+// Wait for DOM to be fully loaded before running the code
+document.addEventListener("DOMContentLoaded", function () {
+  const desktopMenu = document.querySelector(".desktop-menu");
+  const contactBtnHeader = document.querySelector(".resume-button");
 
-function toggleSectionClass(index) {
-  sections.forEach((section, i) => {
-    if (i === index) {
-      section.classList.add("current-section");
-    } else {
-      section.classList.remove("current-section");
+  if (!desktopMenu) {
+    return;
+  }
+
+  if (!contactBtnHeader) {
+    console.error("Resume button (.resume-button) not found");
+  }
+
+  const sectionMappings = [
+    {
+      section: document.getElementById("experience"),
+      link: document.getElementById("experience-link"),
+    },
+    {
+      section: document.getElementById("work"),
+      link: document.getElementById("work-link"),
+    },
+    {
+      section: document.getElementById("about"),
+      link: document.getElementById("about-link"),
+    },
+    {
+      section: document.getElementById("education"),
+      link: document.getElementById("education-link"),
+    },
+    {
+      section: document.getElementById("contact"),
+      link: document.getElementById("contact-link"),
+    },
+  ];
+
+  // Filter out any mappings where either section or link is null
+  const validSectionMappings = sectionMappings.filter((mapping) => {
+    const isValid = mapping.section && mapping.link;
+    if (!isValid) {
+      console.warn(
+        `Missing element for mapping: ${
+          mapping.section ? "Link" : "Section"
+        } not found`
+      );
     }
+    return isValid;
   });
-}
 
-function updateMenuOnScroll() {
-  const scrollY = window.scrollY;
-  const contactBtnOffset =
-    contactBtnHeader.offsetHeight + contactBtnHeader.offsetTop;
-  const workSectionOffset = workSection.offsetHeight + workSection.offsetTop;
-  const aboutSectionOffset = aboutSection.offsetHeight + aboutSection.offsetTop;
-  const isDesktop = window.innerWidth >= 1025;
+  function toggleSectionClass(activeLink) {
+    validSectionMappings.forEach(({ link }) => {
+      if (activeLink === link) {
+        link.classList.add("current-section");
+      } else {
+        link.classList.remove("current-section");
+      }
+    });
+  }
 
-  if (isDesktop) {
-    if (scrollY > contactBtnOffset) {
-      desktopMenu.classList.add("desktop-menu-active");
-      toggleSectionClass(0);
-    } else {
+  function updateMenuOnScroll() {
+    const scrollY = window.scrollY || window.pageYOffset; // Cross-browser support
+    const isDesktop = window.innerWidth >= 1025;
+
+    if (isDesktop) {
+      let current = document.getElementById("experience-link") || null;
+
+      // Find the section that's currently in view
+      for (let i = 0; i < validSectionMappings.length; i++) {
+        const { section } = validSectionMappings[i];
+        const sectionTop = section.getBoundingClientRect().top + scrollY;
+
+        // Check if we've scrolled past the beginning of this section
+        if (scrollY >= sectionTop - 100) {
+          current = validSectionMappings[i].link;
+        }
+      }
+
+      toggleSectionClass(current);
+
+      // Only try to use contactBtnHeader if it exists
+      if (contactBtnHeader && desktopMenu) {
+        const headerPos =
+          contactBtnHeader.getBoundingClientRect().top + scrollY;
+        if (scrollY >= headerPos) {
+          desktopMenu.classList.add("desktop-menu-active");
+        } else {
+          desktopMenu.classList.remove("desktop-menu-active");
+        }
+      }
+    } else if (desktopMenu) {
       desktopMenu.classList.remove("desktop-menu-active");
     }
-
-    if (scrollY > workSectionOffset && scrollY < aboutSectionOffset) {
-      toggleSectionClass(1);
-    } else if (scrollY > aboutSectionOffset) {
-      toggleSectionClass(2);
-    }
-  } else {
-    desktopMenu.classList.remove("desktop-menu-active");
   }
-}
 
-window.addEventListener("scroll", updateMenuOnScroll);
+  updateMenuOnScroll();
+  window.addEventListener("scroll", updateMenuOnScroll);
+  window.addEventListener("resize", updateMenuOnScroll);
+});
 
 // On load
 navSlide();

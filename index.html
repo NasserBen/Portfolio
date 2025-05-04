@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Hey! My name is Nasser Ben, and I am a web developer and UI/UX designer who has a passion for bringing ideas to life."
+      content="Hey! My name is Nasser Ben, and I am a fullstack developer who has a passion for bringing ideas to life."
     />
     <title>Nasser Ben</title>
     <script
@@ -29,9 +29,11 @@
     <!-- Navigation -->
     <nav id="nav">
       <ul class="nav-links" id="nav-links">
-        <li><a href="#work">Work.</a></li>
-        <li><a href="#about">About.</a></li>
-        <li><a href="#contact">Contact.</a></li>
+        <li><a href="#experience ">Experience</a></li>
+        <li><a href="#work">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="burger">
         <svg class="menu menuRotate" viewBox="0 0 100 100" width="42">
@@ -49,9 +51,11 @@
     </nav>
 
     <div class="desktop-menu">
-      <a href="#work" id="one">Work.</a>
-      <a href="#about" id="two">About.</a>
-      <a href="#contact" id="three">Contact.</a>
+      <a href="#experience" id="experience-link">Experience</a>
+      <a href="#work" id="work-link">Projects</a>
+      <a href="#about" id="about-link">About</a>
+      <a href="#education" id="education-link">Education</a>
+      <a href="#contact" id="contact-link">Contact</a>
     </div>
 
     <!-- Header -->
@@ -65,7 +69,7 @@
           <h3
             class="typewrite"
             data-period="2000"
-            data-type='[ "Fullstack Dev.", "Cloud Practitioner.", "Student." , "Always Learning."]'
+            data-type='[ "Fullstack Dev.", "Student." , "Always Learning."]'
             style="margin: 0"
           ></h3>
         </div>
@@ -82,6 +86,45 @@
       </div>
     </section>
 
+    <!-- Experience -->
+    <section id="experience">
+      <h2
+        class="title"
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+      >
+        Experience
+      </h2>
+      <div class="experience-wrapper">
+        <div class="experience-card">
+          <img src="./Images/brytDesignsLogo.svg" alt="BrytDesigns" class="experience-logo" />
+          <div>
+            <p class="experience-date">June 2024 - Present</p>
+            <h3 class="experience-title">BrytDesigns</h3>
+            <h4 class="experience-company">Web Developer (ecommerce focused)</h4>     
+            <p class="experience-content">
+              I help design and develop custom e-commerce websites, creating responsive and interactive experiences for users. My focus is on building visually appealing layouts and features that help businesses provide a seamless online shopping experience for their customers.
+            </p>
+            <div class="tag-wrapper">
+              <div class="tag">Shopify</div>
+              <div class="tag">Liquid</div>
+              <div class="tag">Web Components</div>
+              <div class="tag">React</div>
+              <div class="tag">Typescript</div>
+              <div class="tag">Remix</div>
+              <div class="tag">Sanity</div>
+              <div class="tag">Svelte</div>
+              <div class="tag">Astro</div>
+              <div class="tag">WordPress</div>
+              <div class="tag">Figma</div>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </section>  
+
     <!-- Work -->
     <section id="work">
       <h2
@@ -89,7 +132,7 @@
         data-aos-offset="300"
         data-aos-easing="ease-in-sine"
       >
-        Work.
+        Projects
       </h2>
 
       <div class="project">
@@ -173,7 +216,7 @@
         </div>
       </div>
 
-      <div class="project">
+      <!-- <div class="project">
         <a
           href="https://www.figma.com/proto/uMu5CrWWXRZFxRvXTXNpNg/Untitled?type=design&node-id=2-9310&t=FC1M5uEzI8X476k7-1&scaling=min-zoom&page-id=2%3A8646&mode=design"
           target="_blank"
@@ -209,7 +252,7 @@
             >
           </div>
         </div>
-      </div>
+      </div> -->
 
       <div class="project">
         <a
@@ -289,7 +332,7 @@
           </div>
         </div>
       </div>
-
+<!-- 
       <div class="project">
         <a href="https://hexdom.com/" target="_blank" aria-label="View Page"
           ><img src="./Images/hexdom.jpeg" alt="Hexdom"
@@ -314,16 +357,10 @@
               style="margin-left: 0"
               >Live Preview &#8250;</a
             >
-            <!-- <a
-              href=""
-              class="preview"
-              target="_blank"
-              >View Code &#8250;</a
-            > -->
           </div>
         </div>
-      </div>
-
+      </div> 
+      
       <div class="project">
         <a
           href="https://github.com/pythagoreaneng/shop"
@@ -343,10 +380,7 @@
             quantities managed on AWS DynamoDB. Payments are processed using the
             Stripe API.
           </p>
-          <div class="btnContainer">
-            <!-- <a href="" class="preview" target="_blank"
-              >Live Preview &#8250;</a
-            > -->
+          <div class="btnContainer"> 
             <a
               href="https://github.com/pythagoreaneng/shop"
               aria-label="View Page"
@@ -432,7 +466,7 @@
               >View Code &#8250;</a
             >
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -444,43 +478,68 @@
         data-aos-offset="300"
         data-aos-easing="ease-in-sine"
       >
-        About.
+        About
       </h2>
       <div class="about-wrapper">
         <div class="img-section">
-          <img src="Images/about.jpeg" alt="profile picture" />
-          <ul class="about-list">
+          <img src="Images/pfp.jpeg" alt="profile picture" />
+          <!-- <ul class="about-list">
             <li>🏫 University of Califonia, Riverside</li>
-            <li>📖 Bachelors in Computer Science</li>
-            <li>🎓 Expected 2024</li>
-          </ul>
+            <li>📖 Masters in Computer Science</li>
+            <li>🎓 Expected 2025</li>
+          </ul> -->
         </div>
         <div class="p-section">
           <p class="description">
             TL;DR A student & developer who loves to learn.
           </p>
           <p class="description">
-            I am a computer science student,
-            <span style="color: white"> fullstack web developer</span>, and an
-            <span style="font-weight: bold"
-              >AWS Certified Cloud Practitioner</span
-            >
-            who has a passion for bringing ideas to life. I am currently working
-            on getting an
-            <span style="font-weight: bold">AWS Solutions Architect</span>
-            certification.
+            I am a <span style="font-weight: bold"> fullstack developer</span> and a masters computer science student with a passion for bringing ideas to life.
+            I enjoy working across the stack, from designing responsive UIs to building scalable backend systems.
           </p>
           <p class="description">
-            I am currently expanding my knowledge in
-            <span style="color: white"
-              >Next.js, React Native, AWS, Docker, and Fast API.</span
-            >
-            When I am not learning, you can find me keeping up to date with the
-            latest tech or catch me playing soccer.
+            When I'm not learning something new, you'll probably find me playing soccer, kickboxing, or at the gym.
           </p>
         </div>
       </div>
     </section>
+
+     <!-- Education -->
+     <section id="education">
+      <h2
+        class="title"
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+      >
+        Education
+      </h2>
+      <div class="education-wrapper">
+        <div class="education-card">
+          <img src="./Images/ucrLogo.png" alt="BrytDesigns" class="education-logo" />
+          <div>
+            <p class="education-date">Jan 2025 - Present</p>
+            <h3 class="education-title">University of California, Riverside</h3>
+            <h4 class="education-company">Master of Science</h4>     
+            <p class="education-content">
+                Pursuing a Master's degree in Computer Science with a focus on <span style="font-weight: bold;">machine learning and artifcial intelligence</span>.
+            </p>  
+          </div>
+        </div>
+        <div class="education-card">
+          <img src="./Images/ucrLogo.png" alt="BrytDesigns" class="education-logo" />
+          <div>
+            <p class="education-date">Graduated 2024</p>
+            <h3 class="education-title">University of California, Riverside</h3>
+            <h4 class="education-company">Bachelor of Science</h4>     
+            <p class="education-content">
+                Graduated with a Bachelor's degree in with a focus on <span style="font-weight: bold;">software
+                  engineering and web development</span>.
+            </p>  
+          </div>
+        </div>
+      </div>
+    </section> 
 
     <!-- Contact -->
     <section id="contact">
@@ -490,15 +549,15 @@
         data-aos-offset="300"
         data-aos-easing="ease-in-sine"
       >
-        Contact.
+        Contact
       </h2>
 
       <div class="contact-wrapper">
         <div class="socials">
-          <p style="font-weight: 700; color: white">Connect with me.</p>
+          <!-- <p style="font-weight: 700; color: white">Connect with me.</p> -->
           <div class="info-container">
-            <a href="mailto: contact@nasserben.com" target="_blank"
-              ><svg
+            <a href="mailto: contact@nasserben.com" target="_blank">
+              <svg
                 width="13"
                 height="11"
                 viewBox="0 0 13 11"
@@ -512,8 +571,9 @@
                 <path
                   d="M6.5081 6.63361C6.34421 6.79018 6.10842 6.79018 5.94453 6.63361L0 0.919922V9.86358C0 10.1502 0.199151 10.3825 0.444825 10.3825H12.01C12.2557 10.3825 12.4549 10.1502 12.4549 9.86358V0.996731L6.5081 6.63361Z"
                   fill="white"
-                /></svg
-            ></a>
+                />
+              </svg>
+            </a>
             <a href="mailto: contact@nasserben.com" target="_blank"
               ><p>contact@nasserben.com</p></a
             >
@@ -604,7 +664,7 @@
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init();
+      AOS.init({ once: true});
     </script>
     <script src="script.js"></script>
   </body>
